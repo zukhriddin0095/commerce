@@ -1,7 +1,7 @@
 
 
 
-import { Fragment, useContext } from 'react'
+import { Fragment} from 'react'
 import Hero from '../components/hero/Hero'
 import Pizza from '../components/pizza/Pizza'
 import Sushi from '../components/sushi/Sushi'
