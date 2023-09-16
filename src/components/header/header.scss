@@ -1,0 +1,119 @@
+.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fbf9f9;
+  z-index: 1;
+}
+.header__top {
+  padding: 11px 0;
+  border-bottom: 1px solid #f0f0f0;
+  width: 100%;
+  &__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__aside {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      h5 {
+        color: var(--Black, #191919);
+        text-align: right;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px; /* 128.571% */
+        i {
+          color: #ff7010;
+        }
+        .aside__title {
+          margin-right: 8px;
+        }
+      }
+    }
+    &__bside {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      h5,
+      a {
+        color: var(--Black, #191919);
+        text-align: right;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px; /* 128.571% */
+        i {
+          color: #ff7010 !important;
+        }
+        .aside__title {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
+
+.header {
+  padding: 12px;
+  border-bottom: 2px solid #f0f0f0;
+  &__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__aside {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      h5 {
+        color: #191919;
+        text-align: right;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+      }
+    }
+    &__bside {
+      &__shopping {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        border-radius: 4px;
+        background: var(--Primary, #ff7010);
+        border: none;
+        cursor: pointer;
+        i {
+          color: #fff;
+        }
+        p {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.navbar {
+  display: none;
+}
+.navbar.active {
+  display: block;
+
+  a {
+    margin-right: 32px;
+    color: var(--Black, #191919);
+    text-align: center;
+    font-family: inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+  }
+}

@@ -1,0 +1,97 @@
+.category {
+  background: var(--Background-gray, #f9f9f9);
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+      margin-bottom: 32px;
+      color: var(--Black, #191919);
+      font-family: Inter;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 48px; /* 120% */
+    }
+    button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+  }
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 30px;
+  padding: 20px;
+  @media (max-width: 1200px) {
+  grid-template-columns: repeat(3, auto);
+  }
+  @media (max-width: 1000px) {
+  grid-template-columns: repeat(2, auto);
+  }
+  @media (max-width: 500px) {
+  grid-template-columns: repeat(1, auto);
+  }
+  .card {
+    border-radius: 12px;
+    border: 1px solid var(--Line-gray, #f0f0f0);
+    background: var(--White, #fff);
+    &__img {
+      img {
+        width: 100%;
+      }
+    }
+    &__title {
+      padding: 16px 20px;
+      h5 {
+        color: var(--Black, #191919);
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 133.333% */
+      }
+      p {
+        margin-top: 12px;
+        margin-bottom: 16px;
+        color: var(--Black, #191919);
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px; /* 137.5% */
+      }
+    }
+
+    &__desc {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      button {
+        border-radius: 6px;
+        background: var(--Primary, #ff7010);
+        padding: 13px 32px;
+        color: var(--White, #fff);
+        border: none;
+        text-align: center;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px; /* 137.5% */
+        cursor: pointer;
+      }
+      h6 {
+        color: var(--Primary, #ff7010);
+        text-align: right;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 133.333% */
+      }
+    }
+  }
+}
