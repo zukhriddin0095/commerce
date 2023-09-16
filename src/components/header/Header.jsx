@@ -1,11 +1,20 @@
-import { Fragment, useState } from "react";
+import { Fragment, useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import  { LanguageContext } from "../../context/LanguageContext";
 
 import "./header.scss";
 import { categories } from "../../data/category";
 
 
 const Header = () => {
+  const { langType, lang, setLangType } = useContext(LanguageContext);
+  console.log(lang);
+  // console.log(langType);
+  
+  const changeLang = (e) => {
+    setLangType(e.target.value);
+    localStorage.setItem("language", e.target.value);
+  };
   
   const [navbar, setNavbar] = useState(false);
 
@@ -29,26 +38,26 @@ const Header = () => {
                 <span className="aside__title">
                   <i className="fa-solid fa-location-dot"></i>
                 </span>
-                Москва
+                {lang.moscow}
               </h5>
-              <h5>Проверить адрес</h5>
+              <h5>{lang.addres}</h5>
               <h5>
-                Среднее время доставки*:<strong>00:24:19</strong>
+                {lang.time}<strong>00:24:19</strong>
               </h5>
             </div>
             <div className="navbar__select">
-              <select >
-                <option value="Ru">RU</option>
-                <option value="UZ">UZ</option>
+              <select value={langType} onChange={changeLang}>
+                <option value="ru">RU</option>
+                <option value="uz">UZ</option>
               </select>
             </div>
             <div className="header__top__navbar__bside">
-              <h5>Время работы: с 11:00 до 23:00</h5>
+              <h5>{lang.workingtime}</h5>
               <Link>
                 <span className="aside__title">
                   <i className="fa-regular fa-user"></i>
                 </span>
-                Войти в аккаунт
+                {lang.account}
               </Link>
             </div>
           </div>
